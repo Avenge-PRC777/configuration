@@ -33,3 +33,16 @@
   tags:
     - install
     - install:configuration
+
+# write the worker wrapper
+- name: "writing worker.sh wrapper script"
+  template:
+    src: "edx/app/registrar/workers.sh.j2"
+    dest: "{{ supervisor_app_dir }}/registrar-workers.conf"
+    owner: "{{ registrar_user }}"
+    group: "{{ registrar_user }}"
+    mode: 0644
+  become_user: "{{ registrar_user }}"
+  tags:
+    - install
+    - install:configuration
