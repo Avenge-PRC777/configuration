@@ -149,7 +149,7 @@ CONFIGURATION_VERSION=${CONFIGURATION_VERSION-$OPENEDX_RELEASE}
 cd /var/tmp
 git clone https://github.com/Avenge-PRC777/configuration
 cd configuration
-#git checkout $CONFIGURATION_VERSION
+git checkout $CONFIGURATION_VERSION
 git pull
 
 ##
